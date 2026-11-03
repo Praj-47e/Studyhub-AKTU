@@ -1,30 +1,24 @@
-# StudyHub AKTU
+# StudyHub AKTU — CSE Portal
 
-A responsive, static student study portal built with HTML, CSS and vanilla JavaScript. Ready for GitHub Pages.
+A polished responsive front-end portal for semester-wise AKTU B.Tech CSE study materials. Built with plain HTML, CSS and JavaScript; suitable for GitHub Pages.
 
-## Preview locally
-Open `index.html` in a browser. No build tools or backend are required.
+## Included
+- Semester selector for 1st through 8th semester
+- Subject catalog with course codes/categories (sample catalog; verify your scheme)
+- Search and filters for semester and resource type
+- Notes / PYQ / Important Questions resource cards
+- Mobile navigation and responsive layout
 
-## Publish with GitHub Pages
-1. Create a GitHub repository, for example `studyhub-aktu`.
-2. Upload `index.html`, `style.css`, `script.js`, and this README. Keep all files in the repository root.
-3. Open the repository **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save.
-5. Wait for GitHub Pages to provide the published website link.
+## Publish
+1. Create a GitHub repository.
+2. Upload `index.html`, `style.css`, `script.js`, and the `materials` folder.
+3. In **Settings → Pages**, select **Deploy from a branch**, choose `main` and `/(root)`, then Save.
+4. Use the GitHub Pages URL shown after deployment.
 
-## Add real study materials
-The current cards are examples, not real downloadable course files. To add a PDF:
-1. Create a folder named `materials` in the repository.
-2. Upload your PDF, such as `materials/dbms-unit-1.pdf`.
-3. In `index.html`, find the matching card's `<a class="download-link ...">` and replace the placeholder anchor with:
-   `<a class="download-link" href="materials/dbms-unit-1.pdf" target="_blank" rel="noopener">View material ↗</a>`
-4. Update the sample title, description, semester, type, and search terms as needed.
+## Important: verify the syllabus
+AKTU course structures and course codes can change by scheme, batch and academic year. The subject catalog is a starting template, not a certified official syllabus. Verify every semester's subjects and codes against the syllabus for your own batch before public use. Some entries are electives/practicals and may differ by specialization.
 
-Only upload materials you have permission to share. Add a small source/attribution note when appropriate.
+## Add PDFs
+Create a PDF in `materials/`, then update the relevant resource-card action in `script.js` to open its relative path, or change the resource data model to include a `file` property. Use only material you have permission to share and provide attribution where needed.
 
-## Customize
-- Colors, spacing and layout: `style.css`
-- Material cards and page content: `index.html`
-- Search and filtering behavior: `script.js`
-
-This is a static front-end demo. It does not include accounts, a database, or an admin upload panel.
+This is a static front-end: it does not include student accounts, a database, or admin uploads.
