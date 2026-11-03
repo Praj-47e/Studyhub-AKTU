@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="StudyHub AKTU — organized notes, previous year papers and important questions for B.Tech students.">
+  <title>StudyHub AKTU — Learn smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="StudyHub home">
+        <span class="brand-mark">S<span>+</span></span>
+        <span class="brand-copy"><strong>StudyHub</strong><small>AKTU LEARNING PORTAL</small></span>
+      </a>
+      <div class="side-label">Workspace</div>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a class="nav-link active" href="#home"><span class="nav-icon">⌂</span> Overview</a>
+        <a class="nav-link" href="#materials"><span class="nav-icon">▤</span> Study materials</a>
+        <a class="nav-link" href="#subjects"><span class="nav-icon">▦</span> Subjects</a>
+        <a class="nav-link" href="#about"><span class="nav-icon">ⓘ</span> About portal</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <div class="help-icon">✦</div>
+          <strong>Study smarter, not harder.</strong>
+          <p>Keep your exam prep organized and find the right material faster.</p>
+          <a href="#materials">Explore materials <span>↗</span></a>
+        </div>
+        <div class="side-foot">Made for AKTU learners <span>♥</span></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="home">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <strong>Overview</strong></div>
+        <div class="top-actions">
+          <span class="status-dot"></span><span class="semester-label">B.Tech · All semesters</span>
+          <div class="avatar">SH</div>
+        </div>
+      </header>
+
+      <section class="welcome-section">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> YOUR ACADEMIC COMPANION</div>
+          <h1>Make your next exam<br><em>your best one.</em></h1>
+          <p class="welcome-text">Everything you need to prepare for AKTU exams — neatly organized in one place.</p>
+          <a class="primary-button" href="#materials">Explore study materials <span>↗</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="hero-glow"></div>
+          <div class="book book-back"></div>
+          <div class="book book-front"><span class="book-symbol">S<span>+</span></span><b>STUDY<br>SMART</b><small>AKTU / B.TECH</small></div>
+          <div class="floating-note note-one"><span>✦</span> Focus mode</div>
+          <div class="floating-note note-two"><span>✓</span> Exam ready</div>
+          <div class="hero-spark spark-one">✳</div><div class="hero-spark spark-two">✦</div>
+        </div>
+      </section>
+
+      <section class="quick-stats" aria-label="Portal categories">
+        <a class="stat-card" href="#materials" data-filter="Notes">
+          <div class="stat-icon icon-purple">▤</div><div><strong>Notes</strong><p>Concepts, simplified</p></div><span class="stat-arrow">↗</span>
+        </a>
+        <a class="stat-card" href="#materials" data-filter="PYQs">
+          <div class="stat-icon icon-blue">▧</div><div><strong>Previous papers</strong><p>Practice with PYQs</p></div><span class="stat-arrow">↗</span>
+        </a>
+        <a class="stat-card" href="#materials" data-filter="Important Questions">
+          <div class="stat-icon icon-orange">✎</div><div><strong>Important questions</strong><p>Revise key topics</p></div><span class="stat-arrow">↗</span>
+        </a>
+      </section>
+
+      <section class="materials-section" id="materials">
+        <div class="section-heading">
+          <div><div class="eyebrow">YOUR LEARNING LIBRARY</div><h2>Find your study material</h2><p>Choose a semester, pick a subject, and get started.</p></div>
+          <span class="library-badge"><span class="status-dot"></span> Organized for AKTU</span>
+        </div>
+        <div class="filter-panel">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search subject, topic or material..." autocomplete="off"><kbd>⌘ K</kbd></label>
+          <label class="select-wrap"><span class="sr-only">Semester</span><select id="semesterFilter"><option value="all">All semesters</option><option>1st Semester</option><option>2nd Semester</option><option>3rd Semester</option><option>4th Semester</option><option>5th Semester</option><option>6th Semester</option><option>7th Semester</option><option>8th Semester</option></select><span>⌄</span></label>
+          <label class="select-wrap"><span class="sr-only">Material type</span><select id="typeFilter"><option value="all">All materials</option><option>Notes</option><option>PYQs</option><option>Important Questions</option></select><span>⌄</span></label>
+        </div>
+
+        <div class="results-row"><span id="resultCount">Showing sample materials</span><button id="resetFilters" class="text-button">Reset filters <span>↻</span></button></div>
+        <div class="material-grid" id="materialGrid">
+          <article class="material-card" data-semester="6th Semester" data-type="Notes" data-search="database management systems dbms notes normalization sql">
+            <div class="card-top"><span class="file-type pdf">PDF</span><span class="card-kebab">•••</span></div>
+            <div class="subject-icon purple">▤</div><div class="card-meta">6TH SEMESTER <span>·</span> NOTES</div>
+            <h3>Database Management Systems</h3><p>Unit-wise notes for quick revision and concept clarity.</p>
+            <div class="card-bottom"><span class="file-detail">↳ Add PDF link</span><a href="#" class="download-link placeholder-link" aria-label="Add a PDF link for DBMS notes">View material <span>↗</span></a></div>
+          </article>
+          <article class="material-card" data-semester="6th Semester" data-type="PYQs" data-search="design analysis algorithms daa previous year question paper">
+            <div class="card-top"><span class="file-type paper">PYQ</span><span class="card-kebab">•••</span></div>
+            <div class="subject-icon blue">▧</div><div class="card-meta">6TH SEMESTER <span>·</span> PYQS</div>
+            <h3>Design & Analysis of Algorithms</h3><p>Previous year questions to understand exam patterns.</p>
+            <div class="card-bottom"><span class="file-detail">↳ Add PDF link</span><a href="#" class="download-link placeholder-link" aria-label="Add a PDF link for DAA PYQs">View material <span>↗</span></a></div>
+          </article>
+          <article class="material-card" data-semester="6th Semester" data-type="Important Questions" data-search="web technology important questions html css javascript">
+            <div class="card-top"><span class="file-type questions">Q&A</span><span class="card-kebab">•••</span></div>
+            <div class="subject-icon orange">✎</div><div class="card-meta">6TH SEMESTER <span>·</span> IMPORTANT QUESTIONS</div>
+            <h3>Web Technology</h3><p>High-priority questions for focused exam preparation.</p>
+            <div class="card-bottom"><span class="file-detail">↳ Add PDF link</span><a href="#" class="download-link placeholder-link" aria-label="Add a PDF link for Web Technology questions">View material <span>↗</span></a></div>
+          </article>
+          <article class="material-card" data-semester="6th Semester" data-type="Notes" data-search="machine learning mlt notes algorithms">
+            <div class="card-top"><span class="file-type pdf">PDF</span><span class="card-kebab">•••</span></div>
+            <div class="subject-icon green">⌘</div><div class="card-meta">6TH SEMESTER <span>·</span> NOTES</div>
+            <h3>Machine Learning Techniques</h3><p>Clear, student-friendly notes arranged by unit.</p>
+            <div class="card-bottom"><span class="file-detail">↳ Add PDF link</span><a href="#" class="download-link placeholder-link" aria-label="Add a PDF link for MLT notes">View material <span>↗</span></a></div>
+          </article>
+          <article class="material-card" data-semester="6th Semester" data-type="PYQs" data-search="object oriented system development c++ oosd previous year papers">
+            <div class="card-top"><span class="file-type paper">PYQ</span><span class="card-kebab">•••</span></div>
+            <div class="subject-icon pink">⌘</div><div class="card-meta">6TH SEMESTER <span>·</span> PYQS</div>
+            <h3>Object Oriented System Development</h3><p>Practice questions and paper sets for revision.</p>
+            <div class="card-bottom"><span class="file-detail">↳ Add PDF link</span><a href="#" class="download-link placeholder-link" aria-label="Add a PDF link for OOSD PYQs">View material <span>↗</span></a></div>
+          </article>
+          <article class="material-card" data-semester="6th Semester" data-type="Important Questions" data-search="constitution of india coi important questions">
+            <div class="card-top"><span class="file-type questions">Q&A</span><span class="card-kebab">•••</span></div>
+            <div class="subject-icon teal">✎</div><div class="card-meta">6TH SEMESTER <span>·</span> IMPORTANT QUESTIONS</div>
+            <h3>Constitution of India</h3><p>Important topics and short-answer revision prompts.</p>
+            <div class="card-bottom"><span class="file-detail">↳ Add PDF link</span><a href="#" class="download-link placeholder-link" aria-label="Add a PDF link for COI questions">View material <span>↗</span></a></div>
+          </article>
+        </div>
+        <div class="empty-state" id="emptyState" hidden><div>⌕</div><h3>No materials found</h3><p>Try a different search or clear the filters.</p></div>
+        <div class="upload-note"><span class="note-icon">i</span><p><strong>Getting started:</strong> These are sample cards. Add your own PDFs in the <code>materials</code> folder and update the links in <code>index.html</code>.</p></div>
+      </section>
+
+      <section class="subjects-section" id="subjects">
+        <div class="section-heading compact"><div><div class="eyebrow">BROWSE BY SUBJECT</div><h2>Popular subjects</h2></div><span class="muted-label">6th semester sample</span></div>
+        <div class="subject-chips">
+          <button class="subject-chip" data-subject="DBMS"><span class="chip-dot purple-dot"></span> DBMS <span>↗</span></button>
+          <button class="subject-chip" data-subject="DAA"><span class="chip-dot blue-dot"></span> DAA <span>↗</span></button>
+          <button class="subject-chip" data-subject="Web Technology"><span class="chip-dot orange-dot"></span> Web Technology <span>↗</span></button>
+          <button class="subject-chip" data-subject="Machine Learning"><span class="chip-dot green-dot"></span> Machine Learning <span>↗</span></button>
+          <button class="subject-chip" data-subject="OOSD"><span class="chip-dot pink-dot"></span> OOSD <span>↗</span></button>
+          <button class="subject-chip" data-subject="COI"><span class="chip-dot teal-dot"></span> COI <span>↗</span></button>
+        </div>
+      </section>
+
+      <footer id="about"><a class="footer-brand" href="#home">StudyHub<span>+</span></a><p>Built to make exam preparation feel a little simpler.</p><span>© 2026 StudyHub AKTU · Student project</span></footer>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
